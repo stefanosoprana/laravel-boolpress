@@ -3,7 +3,7 @@
   <div class="container">
     <div class="row">
       <div class="col-12">
-        <h1>Tutti i post</h1>
+        <h1>Tutti i post <a href="{{ route('admin.posts.create') }}" class="btn btn-primary">Aggiungi nuovo</a></h1>
         <table class="table">
           <thead>
             <tr>
@@ -11,9 +11,9 @@
               <th>Titolo</th>
               <th>Autore</th>
               <th>Contenuto</th>
-              <th></th>
-              <th></th>
-              <th></th>
+              <th>Visualizza</th>
+              <th>Aggiorna</th>
+              <th>Elimina</th>
             </tr>
           </thead>
           <tbody>
@@ -22,7 +22,7 @@
                 <td>{{ $post->id }}</td>
                 <td>{{ $post->title }}</td>
                 <td>{{ $post->author }}</td>
-                <td>{{ str_limit($post->content, 20, '(...)') }}</td>
+                <td>{{ str_limit($post->content, 10, '(...)') }}</td>
                 <td>
                   <a href="#" class="btn btn-primary">View</a>
                 </td>
