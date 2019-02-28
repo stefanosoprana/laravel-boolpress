@@ -26,7 +26,7 @@
                 <td>{{ str_limit($post->content, 10, '(...)') }}</td>
                 <td>{{ $post->category->title }}</td>
                 <td>
-                  <a href="#" class="btn btn-primary">View</a>
+                  <a href="{{ route('admin.posts.show', $post->id ) }}" class="btn btn-primary">View</a>
                 </td>
                 <td>
                   <a href="#" class="btn btn-success">Edit</a>
